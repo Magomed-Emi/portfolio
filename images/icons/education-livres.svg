@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="470" viewBox="0 0 520 470" role="img" aria-labelledby="title desc">
+<title id="title">Livres avec chapeau de diplômé</title><desc id="desc">Illustration violette de trois livres empilés et d'un chapeau de diplômé.</desc>
+<defs>
+ <linearGradient id="bookTop" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9f1ff"/><stop offset="1" stop-color="#d3a8fb"/></linearGradient>
+ <linearGradient id="bookSide" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b875f4"/><stop offset="1" stop-color="#7930b2"/></linearGradient>
+ <linearGradient id="cover" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b270e8"/><stop offset="1" stop-color="#561b9d"/></linearGradient>
+ <linearGradient id="cap" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ad5af5"/><stop offset="1" stop-color="#581499"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#531587" flood-opacity=".18"/></filter>
+</defs>
+<path d="M85 293C84 195 142 137 231 135c68-54 172-8 187 67 68 59 22 160-52 177-80 66-257 33-281-86Z" fill="#e7ccfb" opacity=".7"/>
+<ellipse cx="260" cy="415" rx="206" ry="25" fill="#ba82ec" opacity=".23"/>
+<g filter="url(#shadow)" stroke-linejoin="round">
+ <!-- lower book -->
+ <path d="M101 343 319 287l102 48-222 61Z" fill="url(#bookTop)" stroke="#68239b" stroke-width="7"/>
+ <path d="M199 396 421 335v47L199 441Z" fill="#fefaff" stroke="#62229c" stroke-width="8"/>
+ <path d="M101 343v45l98 53v-45Z" fill="url(#bookSide)" stroke="#62229c" stroke-width="8"/>
+ <path d="m210 408 199-55m-199 67 199-55" stroke="#e4caef" stroke-width="3"/>
+ <!-- middle book -->
+ <path d="M104 277 316 223l95 43-215 57Z" fill="#e4b8ff" stroke="#6e239c" stroke-width="7"/>
+ <path d="M196 323 411 266v50l-215 56Z" fill="#fff9ff" stroke="#6e239c" stroke-width="7"/>
+ <path d="M104 277v46l92 49v-49Z" fill="url(#bookSide)" stroke="#6e239c" stroke-width="7"/>
+ <path d="m205 333 196-53m-196 64 196-52" stroke="#e7d9fb" stroke-width="3"/>
+ <!-- upper book -->
+ <path d="M129 218 311 168l87 40-183 50Z" fill="#e9c9ff" stroke="#6922a0" stroke-width="7"/>
+ <path d="M215 258 398 208v46l-183 50Z" fill="#fffaff" stroke="#6922a0" stroke-width="7"/>
+ <path d="M129 218v43l86 43v-46Z" fill="url(#cover)" stroke="#6922a0" stroke-width="7"/>
+ <path d="m224 267 163-43m-163 55 163-43" stroke="#e5d7ef" stroke-width="3"/>
+ <!-- cap crown -->
+ <path d="M213 135c16-35 76-49 116-19l-9 47c-19 30-81 29-99-1Z" fill="url(#cap)" stroke="#54208f" stroke-width="7"/>
+ <path d="M166 111 280 65l132 43-123 52Z" fill="url(#cap)" stroke="#54208f" stroke-width="7"/>
+ <path d="m166 111 123 49 123-52" fill="none" stroke="#7a30b1" stroke-width="3"/>
+ <!-- tassel -->
+ <path d="M284 112 390 125l2 49" fill="none" stroke="#f8c94e" stroke-width="7" stroke-linecap="round"/>
+ <circle cx="392" cy="176" r="7" fill="#ffcb53"/>
+ <path d="m385 182-8 28q14 7 29 0l-8-28Z" fill="#ffd266" stroke="#f1b733" stroke-width="2"/>
+</g>
+</svg>

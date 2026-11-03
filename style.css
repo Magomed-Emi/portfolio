@@ -1,68 +1,62 @@
 /* Body */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 135px;
+}
+
 body {
+    margin: 0;
     background-color: whitesmoke;
     font-family: 'Poppins', sans-serif;
+    color: #111;
 }
 
 /* Header */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #f5f5f5;
     display: flex;
     align-items: center;
     max-width: 1250px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 16px 24px;
+    gap: 22px;
 }
 
 /* Navigation */
-nav {
+.site-nav {
     display: flex;
     align-items: center;
-    gap: 50px;
-    font-size: 25px;
+    justify-content: center;
+    gap: clamp(16px, 2.2vw, 38px);
     flex: 1;
-    margin-left: 40px;
+    min-width: 0;
+    font-size: 17px;
 }
 
-/* Liens du menu */
-nav a {
+
+.site-nav a {
     color: black;
     text-decoration: none;
 }
 
-/* Conteneur de la photo */
-.photo {
-    position: relative;
+.brand-link {
+    display: inline-flex;
+    flex-shrink: 0;
 }
 
-/* Violet en haut à droite */
-.photo::before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 250px;
-    background-color: #d8a5ff;
-    opacity: 0.5;
-    border-radius: 30px;
-    top: -12px;
-    right: -12px;
-    z-index: 0;
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: #7900E6;
 }
 
-/* Violet en bas à gauche */
-.photo::after {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 250px;
-    background-color: #d8a5ff;
-    opacity: 0.5;
-    border-radius: 30px;
-    bottom: -12px;
-    left: -12px;
-    z-index: 0;
-}
-
-/* Petite photo de profil dans le header */
+/* Photo du header */
 .portrait {
     width: 70px;
     height: auto;
@@ -74,21 +68,18 @@ nav a {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-left: auto;
+    margin-left: 0;
 }
 
-/* Images des réseaux sociaux */
 .reseaux img {
     width: 30px;
     height: 30px;
 }
 
-/* Logo LinkedIn en noir */
 .reseaux img.linkedin {
     filter: brightness(0);
 }
 
-/* Dimensions des icônes GitHub, LinkedIn et Mail */
 .lienGit,
 .lienLinkedin,
 .mail {
@@ -96,59 +87,97 @@ nav a {
     height: 35px;
 }
 
-/* Section d'accueil : présentation à gauche, photo à droite */
+/* Sections */
+.accueil,
+.about {
+    width: calc(100% - 40px);
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+}
+
+/* Home */
 .accueil {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    border: 1px solid black;
-    max-width: 1250px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #e5e5e5;
 }
 
-/* Texte Hi, I'm */
+.presentation {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Présentation */
 .hi {
     font-size: 30px;
 }
 
-/* Nom et prénom */
 .nom {
     font-size: 50px;
+    font-weight: 700;
 }
 
-/* Titre Java Backend Developer */
 .description {
     font-size: 45px;
+    font-weight: 700;
     color: #7900E6;
 }
 
-/* Paragraphe de présentation */
 .text {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-/* Grande photo à droite */
+/* Photo principale */
+.photo {
+    position: relative;
+    flex-shrink: 0;
+}
+
 .portrait2 {
     position: relative;
     z-index: 1;
+    display: block;
     width: 450px;
     height: 500px;
     object-fit: cover;
     border-radius: 20px;
 }
 
-/* Conteneur des boutons Download CV et Contact Me */
+/* Décoration violette */
+.photo::before,
+.photo::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 250px;
+    background-color: #d8a5ff;
+    opacity: 0.5;
+    border-radius: 30px;
+    z-index: 0;
+}
+
+.photo::before {
+    top: -12px;
+    right: -12px;
+}
+
+.photo::after {
+    bottom: -12px;
+    left: -12px;
+}
+
+/* Boutons */
 .bouton {
     display: flex;
     gap: 40px;
-    font-size: 20px;
 }
 
-/* Apparence commune aux deux boutons */
 .cv,
 .contact {
     display: flex;
@@ -156,23 +185,21 @@ nav a {
     align-items: center;
     gap: 10px;
     width: 200px;
-    text-align: center;
-    border: 1px solid black;
     padding: 20px;
+    border: 1px solid black;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 18px;
     color: black;
+    text-align: center;
     text-decoration: none;
     background-color: whitesmoke;
-
 }
 
-/* Bouton Download CV en violet */
 .cv {
     background-color: #6e23af88;
 }
 
-/* Conteneur des trois informations */
+/* Informations */
 .infos {
     display: flex;
     align-items: center;
@@ -181,42 +208,1010 @@ nav a {
     font-size: 15px;
 }
 
-/* Lignes verticales entre les informations */
 .infos>div {
     border-right: 1px solid black;
     padding-right: 20px;
 }
 
-/* Supprime la dernière ligne verticale */
 .infos>div:last-child {
     border-right: none;
     padding-right: 0;
 }
 
-/* Supprime les marges des paragraphes */
 .infos p {
     margin: 0;
 }
 
-/* Alignement des icônes et des textes */
 .localisation,
 .formation,
 .disponibilite {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
 }
 
-/* Taille des icônes de localisation, formation et disponibilité */
 .infos img {
     width: 25px;
     height: 25px;
     flex-shrink: 0;
 }
 
-/* Ancienne classe utilisée pour les tests */
-.test {
-    color: red;
-    margin: 100px;
-    padding: 50px;
+.infos p strong,
+.infos p span {
+    display: block;
+}
+
+/* About Me */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-contenu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-texte {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Titres About */
+.aboutMe {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.aboutTitre {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Paragraphes About */
+.about-texte p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Illustration */
+.coding {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Cartes About */
+.about-cartes {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+
+.carte h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.carte p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Icônes About */
+.icone-carte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #e9d5ff;
+}
+
+.icone-carte img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Skills */
+.skills {
+    width: calc(100% - 40px);
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+}
+
+/* Titres */
+.skills-intro h2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.skills-intro h2::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background-color: #7900E6;
+}
+
+.skills-intro h3 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.skills-intro p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Grille des compétences */
+.skills-grille {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Cartes */
+.skill-carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    min-height: 170px;
+    padding: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet au survol */
+.skill-carte:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgb(0 0 0 / 8%);
+}
+
+/* Images */
+.skill-carte img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Noms des technologies */
+.skill-carte h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Projects */
+.projects {
+    width: calc(100% - 40px);
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Titres */
+.projects-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.projects-label::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    flex-shrink: 0;
+    background-color: #7900E6;
+}
+
+.projects-intro h2 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.projects-description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Grille */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+    align-items: stretch;
+}
+
+/* Cartes */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: 28px 24px 22px;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* Icônes */
+.project-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 18px;
+    background-color: #eee0ff;
+}
+
+.project-icon--nutri {
+    background-color: #e1f5e3;
+}
+
+.project-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Contenu des cartes */
+.project-card h3 {
+    margin: 16px 0 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.project-summary {
+    max-width: 410px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+/* Technologies */
+.project-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0 0 22px;
+    list-style: none;
+}
+
+.project-tags li {
+    padding: 5px 12px;
+    border-radius: 999px;
+    background-color: #eee7fa;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Liens */
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #e2dce9;
+}
+
+.project-github,
+.project-more summary {
+    color: #7900E6;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-github:hover,
+.project-more summary:hover {
+    text-decoration: underline;
+}
+
+/* Détails */
+.project-more {
+    margin-left: auto;
+}
+
+.project-more summary {
+    list-style: none;
+}
+
+.project-more summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-more[open] {
+    flex-basis: 100%;
+}
+
+.project-more[open] summary {
+    text-align: right;
+}
+
+.project-more p {
+    margin: 12px 0 0;
+    padding: 14px;
+    background-color: #eee7fa;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Accessibilité */
+.project-github:focus-visible,
+.project-more summary:focus-visible {
+    outline: 2px solid #7900E6;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Education */
+.education {
+    width: calc(100% - 40px);
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+}
+
+/* En-tête */
+.education-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.education-label::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background-color: #7900E6;
+    flex-shrink: 0;
+}
+
+.education-intro h2 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.education-description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Deux colonnes */
+.education-contenu {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 42px;
+    margin-top: 35px;
+}
+
+/* Frise chronologique */
+.education-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 38px;
+    min-width: 0;
+}
+
+.education-timeline::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: 8px;
+    width: 2px;
+    background-color: #7900E6;
+}
+
+/* Cartes */
+.education-carte {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    background-color: whitesmoke;
+}
+
+.education-carte::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -36px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #7900E6;
+}
+
+/* Icônes */
+.education-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: #efdcff;
+}
+
+.education-icone img {
+    width: 42px;
+    height: 42px;
+}
+
+/* Informations */
+.education-infos {
+    min-width: 0;
+}
+
+.education-date {
+    display: inline-block;
+    margin-bottom: 9px;
+    padding: 5px 13px;
+    color: #7900E6;
+    background-color: #efdcff;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.education-infos h3 {
+    margin: 0 0 6px;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.education-infos p {
+    margin: 3px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Illustration */
+.education-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.education-illustration img {
+    display: block;
+    width: 100%;
+    max-width: 410px;
+    height: auto;
+}
+
+/* Contact */
+.contact-section {
+    width: calc(100% - 40px);
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+}
+
+/* Titres */
+.contact-intro h2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.contact-intro h2::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background-color: #7900E6;
+}
+
+.contact-intro h3 {
+    margin: 0 0 12px;
+    font-size: 36px;
+}
+
+.contact-intro p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Deux colonnes */
+.contact-contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Partie gauche */
+.contact-presentation {
+    padding: 30px;
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+/* Disponibilité */
+.contact-disponible {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #efdcff;
+    border-radius: 30px;
+    color: #7900E6;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-point {
+    width: 10px;
+    height: 10px;
+    background-color: #7900E6;
+    border-radius: 50%;
+}
+
+.contact-presentation h3 {
+    margin: 25px 0 15px;
+    font-size: 28px;
+}
+
+.contact-presentation > p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Bouton email */
+.contact-bouton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 25px;
+    margin-top: 10px;
+    color: white;
+    background-color: #7900E6;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.contact-bouton:hover {
+    background-color: #6000b8;
+    transform: translateY(-2px);
+}
+
+.contact-ville {
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Partie droite */
+.contact-liens {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cartes de contact */
+.contact-carte {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.contact-carte:hover {
+    transform: translateY(-3px);
+    border-color: #7900E6;
+}
+
+/* Icônes */
+.contact-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    background-color: #efdcff;
+    color: #7900E6;
+    border-radius: 18px;
+}
+
+.contact-icone svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Informations */
+.contact-details {
+    min-width: 0;
+}
+
+.contact-details h4 {
+    margin: 0 0 8px;
+    font-size: 19px;
+}
+
+.contact-details p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+/* Flèche */
+.contact-fleche {
+    margin-left: auto;
+    color: #7900E6;
+    font-size: 25px;
+}
+
+
+/* Projects spotlight */
+.project-card--featured {
+    border-color: #d7c1ef;
+}
+
+.project-featured-label {
+    display: inline-block;
+    padding: 4px 11px;
+    margin: 0 0 12px;
+    border-radius: 999px;
+    background: #eee0ff;
+    color: #6700c6;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* About icons */
+.icone-carte img {
+    filter: invert(17%) sepia(100%) saturate(6000%) hue-rotate(270deg);
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: calc(100% - 40px);
+    max-width: 1250px;
+    padding: 24px 8px 36px;
+    margin: 18px auto 0;
+    border-top: 1px solid #d0c8d5;
+    font-size: 14px;
+    color: #555;
+}
+
+.site-footer p { margin: 0; }
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #5c00ba;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-links a:hover { text-decoration: underline; }
+
+/* Interaction */
+a:focus-visible,
+summary:focus-visible {
+    outline: 2px solid #7900E6;
+    outline-offset: 4px;
+}
+
+/* Tablettes */
+@media (max-width: 1100px) {
+    .accueil {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .photo { align-self: center; }
+    .portrait2 { width: 350px; height: 400px; }
+
+    .about-contenu { gap: 25px; }
+    .coding { width: 240px; }
+    .education-contenu { gap: 25px; }
+}
+
+@media (max-width: 900px) {
+    html { scroll-padding-top: 175px; }
+
+    .site-header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 12px;
+    }
+
+    .site-nav {
+        order: 3;
+        flex: 0 0 100%;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .reseaux { margin-left: auto; }
+
+    .about-contenu { flex-direction: column; }
+    .coding { width: min(260px, 100%); }
+    .about-cartes { gap: 15px; }
+
+    .skills-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .projects-grid { grid-template-columns: 1fr; }
+    .education-contenu { grid-template-columns: 1fr; gap: 10px; }
+    .education-illustration img { max-width: 260px; }
+    .contact-contenu { grid-template-columns: 1fr; }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+    html { scroll-padding-top: 190px; }
+
+    .site-header {
+        padding: 12px 20px;
+        gap: 12px;
+    }
+
+    .portrait { width: 48px; border-radius: 12px; }
+    .reseaux { gap: 16px; }
+    .reseaux img { width: 24px; height: 24px; }
+
+    .site-nav {
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 4px 0 8px;
+        font-size: 15px;
+        scrollbar-width: thin;
+    }
+
+    .accueil,
+    .about,
+    .skills,
+    .projects,
+    .education,
+    .contact-section { padding: 20px; }
+
+    .hi { font-size: 21px; }
+    .nom { font-size: clamp(25px, 7vw, 34px); overflow-wrap: anywhere; }
+    .description { font-size: clamp(23px, 6vw, 30px); }
+
+    .text,
+    .about-texte p,
+    .skills-intro p,
+    .projects-description,
+    .education-description,
+    .contact-intro p { font-size: 16px; }
+
+    .aboutMe,
+    .skills-intro h3,
+    .projects-intro h2,
+    .education-intro h2,
+    .contact-intro h3 { font-size: 30px; }
+
+    .aboutTitre { font-size: 18px; }
+    .about-cartes { flex-direction: column; }
+
+    .bouton { flex-wrap: wrap; gap: 12px; }
+    .cv, .contact { width: min(100%, 220px); padding: 14px; font-size: 16px; }
+
+    .infos { gap: 16px; padding: 26px 0 6px; flex-wrap: wrap; }
+    .infos > div { border: 0; padding-right: 0; }
+    .localisation, .formation, .disponibilite { gap: 10px; }
+    .infos img { width: 20px; height: 20px; }
+
+    .portrait2 { width: min(100%, 300px); height: auto; }
+    .photo { max-width: calc(100% - 24px); }
+    .photo::before, .photo::after { width: 90px; height: 130px; }
+
+    .skills-grille { gap: 12px; }
+    .skill-carte { min-height: 135px; padding: 14px; }
+    .skill-carte img { width: 45px; height: 45px; }
+    .skill-carte h4 { font-size: 15px; }
+
+    .project-card { padding: 20px 16px; }
+    .project-summary { font-size: 15px; }
+
+    .education-timeline { padding-left: 26px; }
+    .education-timeline::before { left: 6px; }
+    .education-carte { padding: 15px; gap: 12px; }
+    .education-carte::before { left: -25px; }
+    .education-icone { width: 50px; height: 50px; border-radius: 14px; }
+    .education-icone img { width: 32px; height: 32px; }
+    .education-date { font-size: 13px; }
+    .education-infos h3 { font-size: 16px; }
+    .education-infos p { font-size: 13px; }
+
+    .contact-presentation { padding: 20px; }
+    .contact-presentation h3 { font-size: 24px; }
+    .contact-carte { gap: 12px; padding: 15px; }
+    .contact-icone { width: 48px; height: 48px; }
+    .contact-icone svg { width: 25px; height: 25px; }
+    .contact-details h4 { font-size: 16px; }
+    .contact-details p { font-size: 13px; }
+
+    .site-footer { justify-content: center; text-align: center; }
+    .footer-links { justify-content: center; }
+}
+
+@media (max-width: 380px) {
+    .site-nav { gap: 16px; }
+    .bouton { flex-direction: column; }
+    .cv, .contact { width: 100%; }
+    .education-carte { align-items: flex-start; }
+    .education-icone { width: 42px; height: 42px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .skill-carte,
+    .project-card,
+    .contact-carte,
+    .contact-bouton { transition: none; }
+}
+
+
+/* Sélecteur de langue */
+.language-switch {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid #ddd1ec;
+    border-radius: 12px;
+    background: #f0e9f7;
+    flex-shrink: 0;
+}
+
+.lang-button {
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #494053;
+    padding: 7px 9px;
+    font: 600 13px 'Poppins', sans-serif;
+    cursor: pointer;
+    min-width: 36px;
+}
+
+.lang-button:hover { color: #7900E6; }
+.lang-button.is-active {
+    color: #fff;
+    background: #7900E6;
+}
+.lang-button:focus-visible {
+    outline: 2px solid #7900E6;
+    outline-offset: 2px;
+}
+
+/* Langue sur petit écran */
+@media (max-width: 900px) {
+    .language-switch { order: 2; }
+    .site-nav { order: 3; }
+}
+
+@media (max-width: 600px) {
+    .site-header { column-gap: 9px; }
+    .language-switch { padding: 3px; }
+    .lang-button { padding: 6px; font-size: 12px; min-width: 31px; }
+    .reseaux { gap: 10px; }
 }

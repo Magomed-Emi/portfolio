@@ -1,131 +1,414 @@
 <!DOCTYPE html>
-<html lang="fr">
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Usumov Magomed-Emi</title>
-
-    <!-- Police Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Fichier CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Portfolio of Magomed-Emi Usumov, junior Java backend developer based in Brussels. Projects in Java, Spring Boot, REST APIs and MySQL." data-i18n-content="meta_description" name="description"/>
+<title data-i18n="site_title">Portfolio | Magomed-Emi Usumov — Java Backend Developer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
-
 <body>
-
-    <header>
-        <img class="portrait" src="images/profil.png" alt="Portrait de Magomed Usumov">
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-
-            <div class="reseaux">
-
-                <a href="https://github.com/Magomed-Emi?tab=repositories" target="_blank">
-                    <img class="lienGit" src="images/icons/github.svg" alt="Lien Github de Usumov Magomed">
-                </a>
-
-                <a href="https://www.linkedin.com/in/magomed-emi-usumov-a0558a335/">
-                    <img class="linkedin" src="images/icons/linkedin.png" alt="LinkedIn">
-                </a>
-
-                <a href="mailto:usumovmagomedemi@gmail.com">
-                    <img class="mail" src="images/icons/mail.svg" alt="Adresse mail de Usumov Magomed">
-                </a>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-    <main>
-
-        <section class="accueil">
-
-
-            <div class="presentation">
-                <p class="hi">Hi, I'm</p>
-
-                <h1 class="nom">Usumov Magomed-Emi</h1>
-
-                <h2 class="description">Java Backend Developer</h2>
-                <p class="text">
-
-                    Passionate Junior Java Backend Developer focused on building <br>
-                    reliable and efficient applications using Java, Spring Boot, <br>
-                    REST APIs, and MySQL. Always eager to learn new technologies, <br>
-                    improve my skills, and take on new challenges.
-                </p>
-
-                <div class="bouton">
-
-                    <a class="cv" href="documents/CV_Magomed-Emi_Usumov_EN.pdf" download>
-                        <img src="images/icons/download.svg" alt="">Download CV</a>
-
-                    <a class="contact" href="mailto:usumovmagomedemi@gmail.com">
-                        <img src="images/icons/mail.svg" alt=""><strong> Contact Me</strong></a>
-
-                </div>
-
-                <div class="infos">
-                    <div class="localisation"><img src="images/icons/map-pin.svg">
-                        <p><strong>
-                                Brussels, Belgium</strong> <br> Open to opportunitues</p>
-                    </div>
-
-                    <div class="formation"><img src="images/icons/graduation-cap.svg">
-                        <p><strong>
-                                IT Student</strong> <br>ISFCE</p>
-                    </div>
-
-                    <div class="disponibilite"><img src="images/icons/briefcase-business.svg">
-                        <p><strong>
-                                Available</strong> <br> Junior Position</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="photo">
-                <img class="portrait2" src="images/profil.png" alt="Mon portrait">
-            </div>
-
-
-        </section>
-        <section id="about" class="about">
-
-            <h1>About Me</h1>
-            <p>
-                ## About Me
-
-                I'm a Junior Java Backend Developer currently completing my Bachelor's degree
-                in Business IT at ISFCE in Brussels. **I have completed my coursework, and
-                only my final-year project (TFE) remains before graduation.**
-
-                Through my personal projects, I've gained practical experience in Java, Spring
-                Boot, REST APIs, MySQL, and application security with Spring Security and JWT.
-
-                I enjoy solving problems, developing reliable applications, and continuously
-                improving my programming skills.
-
-                I'm currently looking for my first professional opportunity in IT, where I can
-                contribute to real-world projects, learn from experienced developers, and grow professionally.
+<header class="site-header">
+<a aria-label="Back to Home" class="brand-link" data-i18n-aria-label="brand_aria" href="#home">
+<img alt="Portrait of Magomed-Emi Usumov" class="portrait" data-i18n-alt="photo_mini_alt" src="images/profil.png"/>
+</a>
+<nav aria-label="Main navigation" class="site-nav" data-i18n-aria-label="nav_aria">
+<a data-i18n="nav_home" href="#home">Home</a>
+<a data-i18n="nav_about" href="#about">About</a>
+<a data-i18n="nav_skills" href="#skills">Skills</a>
+<a data-i18n="nav_projects" href="#projects">Projects</a>
+<a data-i18n="nav_education" href="#education">Education</a>
+<a data-i18n="nav_contact" href="#contact">Contact</a>
+</nav>
+<div aria-label="Social links" class="reseaux" data-i18n-aria-label="socials_aria">
+<a aria-label="GitHub profile" data-i18n-aria-label="github_aria" href="https://github.com/Magomed-Emi" rel="noopener noreferrer" target="_blank">
+<img alt="" class="lienGit" src="images/icons/github.svg"/>
+</a>
+<a aria-label="LinkedIn profile" data-i18n-aria-label="linkedin_aria" href="https://www.linkedin.com/in/magomed-emi-usumov-a0558a335/" rel="noopener noreferrer" target="_blank">
+<img alt="" class="linkedin" src="images/icons/linkedin.png"/>
+</a>
+<a aria-label="Send an email" data-i18n-aria-label="email_aria" href="mailto:usumovmagomedemi@gmail.com">
+<img alt="" class="mail" src="images/icons/mail.svg"/>
+</a>
+</div><div aria-label="Choose language" class="language-switch" data-i18n-aria-label="language_selector_aria" role="group">
+<button aria-label="Version française" aria-pressed="false" class="lang-button" data-lang="fr" lang="fr" type="button">FR</button>
+<button aria-label="English version" aria-pressed="true" class="lang-button is-active" data-lang="en" lang="en" type="button">EN</button>
+</div>
+</header>
+<main>
+<section class="accueil" id="home">
+<div class="presentation">
+<p class="hi" data-i18n="home_hi">Hi, I'm</p>
+<h1 class="nom">Usumov Magomed-Emi</h1>
+<h2 class="description" data-i18n="home_job">Java Backend Developer</h2>
+<p class="text" data-i18n="home_intro">
+            Junior Java Backend Developer focused on building reliable applications
+            with Java, Spring Boot, REST APIs and MySQL. I enjoy solving technical
+            challenges and continuously improving my skills.
+        </p>
+<div class="bouton">
+<a class="cv" data-i18n-href="cv_file" download="" href="documents/CV_Magomed-Emi_Usumov_EN.pdf"><img alt="" src="images/icons/download.svg"/><span data-i18n="cv_button">Download CV</span></a>
+<a class="contact" href="#contact">
+<img alt="" src="images/icons/mail.svg"/> <strong data-i18n="contact_button">Contact Me</strong>
+</a>
+</div>
+<div class="infos">
+<div class="localisation">
+<img alt="" src="images/icons/map-pin.svg"/>
+<p><strong data-i18n="location_city">Brussels, Belgium</strong><span data-i18n="location_open">Open to opportunities</span></p>
+</div>
+<div class="formation">
+<img alt="" src="images/icons/graduation-cap.svg"/>
+<p><strong data-i18n="home_education">IT Student</strong><span>ISFCE</span></p>
+</div>
+<div class="disponibilite">
+<img alt="" src="images/icons/briefcase-business.svg"/>
+<p><strong data-i18n="home_available">Available</strong><span data-i18n="home_junior">Junior Position</span></p>
+</div>
+</div>
+</div>
+<div class="photo">
+<img alt="Portrait of Magomed-Emi Usumov" class="portrait2" data-i18n-alt="photo_alt" src="images/profil.png"/>
+</div>
+</section>
+<section class="about" id="about">
+<div class="about-contenu">
+<div class="about-texte">
+<h2 class="aboutMe" data-i18n="about_title">About Me</h2>
+<h3 class="aboutTitre" data-i18n="about_subtitle">From Learning to Real-World Impact</h3>
+<p data-i18n="about_p1">
+                I enjoy turning ideas into working applications and solving practical problems.
+                My personal projects have taught me to approach technical challenges with
+                curiosity, persistence and attention to detail.
             </p>
-
-
-        </section>
-    </main>
-
-    <footer>
-    </footer>
-</body>
-
+<p data-i18n="about_p2">
+                I'm completing my Bachelor's degree in Business IT at ISFCE in Brussels.
+                I'm looking forward to contributing to a professional team, learning from
+                experienced developers and growing through real-world projects.
+            </p>
+</div>
+<img alt="Illustration of software development" class="coding" data-i18n-alt="coding_alt" loading="lazy" src="images/icons/Coding-amico.svg"/>
+</div>
+<div class="about-cartes">
+<div class="carte">
+<div class="icone-carte"><img alt="" src="images/icons/lightbulb.svg"/></div>
+<h3 data-i18n="about_solve_title">Problem Solving</h3>
+<p data-i18n="about_solve_desc">Finding practical solutions to technical challenges.</p>
+</div>
+<div class="carte">
+<div class="icone-carte"><img alt="" src="images/icons/chart-no-axes-combined.svg"/></div>
+<h3 data-i18n="about_learn_title">Continuous Learning</h3>
+<p data-i18n="about_learn_desc">Curious about new technologies and eager to improve.</p>
+</div>
+<div class="carte">
+<div class="icone-carte"><img alt="" src="images/icons/users-round.svg"/></div>
+<h3 data-i18n="about_team_title">Teamwork</h3>
+<p data-i18n="about_team_desc">Open to collaboration, feedback and shared ideas.</p>
+</div>
+</div>
+</section>
+<section class="skills" id="skills">
+<div class="skills-intro">
+<h2 data-i18n="skills_label">SKILLS</h2>
+<h3 data-i18n="skills_title">My Skills</h3>
+<p data-i18n="skills_desc">
+                    Technologies and tools I use to build reliable,
+                    secure and maintainable backend applications.
+                </p>
+</div>
+<div class="skills-grille">
+<div class="skill-carte">
+<img alt="Java" src="images/icons/java.svg"/>
+<h4>Java</h4>
+</div>
+<div class="skill-carte">
+<img alt="Spring Boot" src="images/icons/spring-boot.svg"/>
+<h4>Spring Boot</h4>
+</div>
+<div class="skill-carte">
+<img alt="Spring Security" src="images/icons/spring-security.svg"/>
+<h4>Spring Security</h4>
+</div>
+<div class="skill-carte">
+<img alt="REST APIs" src="images/icons/rest-api.svg"/>
+<h4 data-i18n="skills_api">REST APIs</h4>
+</div>
+<div class="skill-carte">
+<img alt="MySQL" src="images/icons/mysql.svg"/>
+<h4>MySQL</h4>
+</div>
+<div class="skill-carte">
+<img alt="JWT" src="images/icons/jwt.svg"/>
+<h4>JWT</h4>
+</div>
+<div class="skill-carte">
+<img alt="Git" src="images/icons/git.svg"/>
+<h4>Git</h4>
+</div>
+<div class="skill-carte">
+<img alt="GitHub" src="images/icons/github.svg"/>
+<h4>GitHub</h4>
+</div>
+</div>
+</section>
+<section class="projects" id="projects">
+<div class="projects-intro">
+<p class="projects-label" data-i18n="projects_label">PROJECTS</p>
+<h2 data-i18n="projects_title">My Projects</h2>
+<p class="projects-description" data-i18n="projects_desc">
+                    Projects I have built to apply and strengthen my skills in
+                    Java, Spring Boot and web development.
+                </p>
+</div>
+<div class="projects-grid">
+<!-- Nutri-Track -->
+<article class="project-card project-card--featured">
+<div class="project-icon project-icon--nutri">
+<img alt="" src="images/icons/project-nutri.svg"/>
+</div>
+<h3>Nutri-Track</h3>
+<span class="project-featured-label" data-i18n="project_featured">Main project</span>
+<p class="project-summary" data-i18n="project_nutri_summary">
+                        A nutrition-tracking REST API for managing meals,
+                        calculating calories and macronutrients, and setting daily goals.
+                    </p>
+<ul aria-label="Technologies" class="project-tags">
+<li>Java</li>
+<li>Spring Boot</li>
+<li>MySQL</li>
+<li>JUnit</li>
+</ul>
+<div class="project-actions">
+<a class="project-github" href="https://github.com/Magomed-Emi/nutrition-tracker-api" rel="noopener noreferrer" target="_blank">
+                            GitHub ↗
+                        </a>
+<details class="project-more">
+<summary><span data-i18n="project_nutri_button">Details</span><span aria-hidden="true">→</span></summary>
+<p data-i18n="project_nutri_details">
+                                Backend project with food and meal CRUD,
+                                automatic daily nutritional calculations,
+                                goals, and unit tests.
+                                The React frontend is still in progress.
+                            </p>
+</details>
+</div>
+</article>
+<!-- TshirtUp -->
+<article class="project-card">
+<div class="project-icon project-icon--tshirt">
+<img alt="" src="images/icons/project-tshirt.svg"/>
+</div>
+<h3>TshirtUp</h3>
+<p class="project-summary" data-i18n="project_tshirt_summary">
+                        A full-stack T-shirt store with a React frontend,
+                        Spring Boot backend, product catalogue and user accounts.
+                    </p>
+<ul aria-label="Technologies" class="project-tags">
+<li>React</li>
+<li>Spring Boot</li>
+<li>REST APIs</li>
+<li>JPA</li>
+</ul>
+<div class="project-actions">
+<a class="project-github" href="https://github.com/Magomed-Emi/tshirt-app" rel="noopener noreferrer" target="_blank">
+                            GitHub ↗
+                        </a>
+<details class="project-more">
+<summary><span data-i18n="project_tshirt_button">Details</span><span aria-hidden="true">→</span></summary>
+<p data-i18n="project_tshirt_details">
+                                Includes product and category browsing,
+                                an administration interface for product CRUD,
+                                login and registration, and a shopping-cart page.
+                                A learning project still being improved.
+                            </p>
+</details>
+</div>
+</article>
+<!-- To-Do List -->
+<article class="project-card">
+<div class="project-icon project-icon--todo">
+<img alt="" src="images/icons/project-todo.svg"/>
+</div>
+<h3>To-Do List API</h3>
+<p class="project-summary" data-i18n="project_todo_summary">
+                        A REST API for creating and deleting tasks,
+                        tracking completion status and storing task data.
+                    </p>
+<ul aria-label="Technologies" class="project-tags">
+<li>Java</li>
+<li>Spring Boot</li>
+<li>REST APIs</li>
+<li>JPA</li>
+</ul>
+<div class="project-actions">
+<a class="project-github" href="https://github.com/Magomed-Emi/todo-list" rel="noopener noreferrer" target="_blank">
+                            GitHub ↗
+                        </a>
+<details class="project-more">
+<summary><span data-i18n="project_todo_button">Details</span><span aria-hidden="true">→</span></summary>
+<p data-i18n="project_todo_details">
+                                Practice backend API with endpoints to create,
+                                list and delete tasks, toggle task completion,
+                                and persist data using Spring Data JPA.
+                            </p>
+</details>
+</div>
+</article>
+<!-- Payment Tracker -->
+<article class="project-card">
+<div class="project-icon project-icon--payment">
+<img alt="" src="images/icons/project-payment.svg"/>
+</div>
+<h3>Payment Tracker</h3>
+<p class="project-summary" data-i18n="project_payment_summary">
+                        A Spring Boot API to manage payments, search transactions,
+                        and calculate totals, averages and other statistics.
+                    </p>
+<ul aria-label="Technologies" class="project-tags">
+<li>Java</li>
+<li>Spring Boot</li>
+<li>MySQL</li>
+<li>REST APIs</li>
+</ul>
+<div class="project-actions">
+<a class="project-github" href="https://github.com/Magomed-Emi/payment-tracker" rel="noopener noreferrer" target="_blank">
+                            GitHub ↗
+                        </a>
+<details class="project-more">
+<summary><span data-i18n="project_payment_button">Details</span><span aria-hidden="true">→</span></summary>
+<p data-i18n="project_payment_details">
+                                Payment CRUD, amount filters, search by title,
+                                validation, totals, averages, minimum and
+                                maximum amounts, backed by MySQL.
+                            </p>
+</details>
+</div>
+</article>
+</div>
+</section>
+<section class="education" id="education">
+<div class="education-intro">
+<p class="education-label" data-i18n="education_label">EDUCATION</p>
+<h2 data-i18n="education_title">My Education</h2>
+<p class="education-description" data-i18n="education_desc">
+                    My academic background and training that shaped my path into software development.
+                </p>
+</div>
+<div class="education-contenu">
+<!-- Formations -->
+<div class="education-timeline">
+<article class="education-carte">
+<div class="education-icone">
+<img alt="" src="images/icons/education-graduation.svg"/>
+</div>
+<div class="education-infos">
+<span class="education-date" data-i18n="education_current">2023 – Present</span>
+<h3 data-i18n="education_bachelor">Bachelor's Degree in Business IT</h3>
+<p data-i18n="education_city">ISFCE, Brussels</p>
+<p data-i18n="education_tfe">Final-year project (TFE) in progress.</p>
+</div>
+</article>
+<article class="education-carte">
+<div class="education-icone">
+<img alt="" src="images/icons/education-code.svg"/>
+</div>
+<div class="education-infos">
+<span class="education-date">2018 – 2019</span>
+<h3 data-i18n="education_technician">Programming Technician</h3>
+</div>
+</article>
+<article class="education-carte">
+<div class="education-icone">
+<img alt="" src="images/icons/education-construction.svg"/>
+</div>
+<div class="education-infos">
+<span class="education-date">2016</span>
+<h3 data-i18n="education_construction">Building Construction</h3>
+</div>
+</article>
+</div>
+<!-- Illustration -->
+<div class="education-illustration">
+<img alt="Illustration de livres et d'un chapeau de diplômé" data-i18n-alt="books_alt" src="images/icons/education-livres.svg"/>
+</div>
+</div>
+</section>
+<section class="contact-section" id="contact">
+<div class="contact-intro">
+<h2 data-i18n="contact_label">CONTACT</h2>
+<h3 data-i18n="contact_title">Get In Touch</h3>
+<p data-i18n="contact_intro">
+                    Interested in working together or have an opportunity in mind?
+                    Feel free to reach out. I'd be happy to connect!
+                </p>
+</div>
+<div class="contact-contenu">
+<!-- Présentation -->
+<div class="contact-presentation">
+<div class="contact-disponible"><span class="contact-point"></span><span data-i18n="contact_available">Open to Junior IT Opportunities</span></div>
+<h3 data-i18n="contact_work">Let's Work Together!</h3>
+<p data-i18n="contact_prof">
+                        I'm open to junior opportunities in Java backend development,
+                        software testing and application support.
+                    </p>
+<a class="contact-bouton" href="mailto:usumovmagomedemi@gmail.com"><span data-i18n="contact_send">Send Me an Email</span><span>↗</span></a>
+<p class="contact-ville" data-i18n="contact_city">Brussels, Belgium</p>
+</div>
+<!-- Coordonnées -->
+<div class="contact-liens">
+<a class="contact-carte" href="mailto:usumovmagomedemi@gmail.com">
+<div class="contact-icone">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="16" rx="2" width="20" x="2" y="4"></rect>
+<path d="m22 7-10 6L2 7"></path>
+</svg>
+</div>
+<div class="contact-details">
+<h4 data-i18n="contact_email_label">Email</h4>
+<p>usumovmagomedemi@gmail.com</p>
+</div>
+<span class="contact-fleche">↗</span>
+</a>
+<a class="contact-carte" href="https://github.com/Magomed-Emi" rel="noopener noreferrer" target="_blank">
+<div class="contact-icone">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"></path>
+</svg>
+</div>
+<div class="contact-details">
+<h4>GitHub</h4>
+<p>github.com/Magomed-Emi</p>
+</div>
+<span class="contact-fleche">↗</span>
+</a>
+<a class="contact-carte" href="https://www.linkedin.com/in/magomed-emi-usumov-a0558a335/" rel="noopener noreferrer" target="_blank">
+<div class="contact-icone">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<rect height="20" rx="2" width="20" x="2" y="2"></rect>
+<path d="M7 10v7M7 7v.01M11 17v-7h3a3 3 0 0 1 3 3v4M11 13a3 3 0 0 1 3-3"></path>
+</svg>
+</div>
+<div class="contact-details">
+<h4>LinkedIn</h4>
+<p data-i18n="contact_linkedin_sub">Connect with me professionally</p>
+</div>
+<span class="contact-fleche">↗</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<p data-i18n="footer_text">© 2026 Magomed-Emi Usumov · Built with HTML &amp; CSS</p>
+<div class="footer-links">
+<a data-i18n="footer_top" href="#home">Back to top ↑</a>
+<a href="https://github.com/Magomed-Emi" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/magomed-emi-usumov-a0558a335/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+</footer>
+<script defer="" src="lang.js"></script></body>
 </html>
