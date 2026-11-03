@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Portfolio of Magomed-Emi Usumov, junior Java backend developer based in Brussels. Projects in Java, Spring Boot, REST APIs and MySQL." data-i18n-content="meta_description" name="description"/>
+<meta content="Personal portfolio of Magomed-Emi Usumov, junior Java developer in Brussels. My projects, skills and contact details." data-i18n-content="meta_description" name="description"/>
 <title data-i18n="site_title">Portfolio | Magomed-Emi Usumov — Java Backend Developer</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -16,7 +16,10 @@
 <a aria-label="Back to Home" class="brand-link" data-i18n-aria-label="brand_aria" href="#home">
 <img alt="Portrait of Magomed-Emi Usumov" class="portrait" data-i18n-alt="photo_mini_alt" src="images/profil.png"/>
 </a>
-<nav aria-label="Main navigation" class="site-nav" data-i18n-aria-label="nav_aria">
+<button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16 M4 12h16 M4 17h16"/></svg>
+</button>
+<nav id="primary-nav" aria-label="Main navigation" class="site-nav" data-i18n-aria-label="nav_aria">
 <a data-i18n="nav_home" href="#home">Home</a>
 <a data-i18n="nav_about" href="#about">About</a>
 <a data-i18n="nav_skills" href="#skills">Skills</a>
@@ -45,11 +48,7 @@
 <p class="hi" data-i18n="home_hi">Hi, I'm</p>
 <h1 class="nom">Usumov Magomed-Emi</h1>
 <h2 class="description" data-i18n="home_job">Java Backend Developer</h2>
-<p class="text" data-i18n="home_intro">
-            Junior Java Backend Developer focused on building reliable applications
-            with Java, Spring Boot, REST APIs and MySQL. I enjoy solving technical
-            challenges and continuously improving my skills.
-        </p>
+<p class="text" data-i18n="home_intro">I'm a junior Java developer based in Brussels. I build REST APIs with Spring Boot and MySQL, and I like figuring out how things work behind the scenes.</p>
 <div class="bouton">
 <a class="cv" data-i18n-href="cv_file" download="" href="documents/CV_Magomed-Emi_Usumov_EN.pdf"><img alt="" src="images/icons/download.svg"/><span data-i18n="cv_button">Download CV</span></a>
 <a class="contact" href="#contact">
@@ -80,16 +79,8 @@
 <div class="about-texte">
 <h2 class="aboutMe" data-i18n="about_title">About Me</h2>
 <h3 class="aboutTitre" data-i18n="about_subtitle">From Learning to Real-World Impact</h3>
-<p data-i18n="about_p1">
-                I enjoy turning ideas into working applications and solving practical problems.
-                My personal projects have taught me to approach technical challenges with
-                curiosity, persistence and attention to detail.
-            </p>
-<p data-i18n="about_p2">
-                I'm completing my Bachelor's degree in Business IT at ISFCE in Brussels.
-                I'm looking forward to contributing to a professional team, learning from
-                experienced developers and growing through real-world projects.
-            </p>
+<p data-i18n="about_p1">I got into backend development during my studies and kept practising through personal projects. I enjoy working on the logic of an application, from API endpoints to database queries.</p>
+<p data-i18n="about_p2">I'm finishing my Business IT degree at ISFCE. My final-year project is the last part to complete, and I'm looking for a junior role where I can learn from a team and contribute to real projects.</p>
 </div>
 <img alt="Illustration of software development" class="coding" data-i18n-alt="coding_alt" loading="lazy" src="images/icons/Coding-amico.svg"/>
 </div>
@@ -97,17 +88,17 @@
 <div class="carte">
 <div class="icone-carte"><img alt="" src="images/icons/lightbulb.svg"/></div>
 <h3 data-i18n="about_solve_title">Problem Solving</h3>
-<p data-i18n="about_solve_desc">Finding practical solutions to technical challenges.</p>
+<p data-i18n="about_solve_desc">I like breaking problems down and finding the cause.</p>
 </div>
 <div class="carte">
 <div class="icone-carte"><img alt="" src="images/icons/chart-no-axes-combined.svg"/></div>
 <h3 data-i18n="about_learn_title">Continuous Learning</h3>
-<p data-i18n="about_learn_desc">Curious about new technologies and eager to improve.</p>
+<p data-i18n="about_learn_desc">I learn best by trying things out and building projects.</p>
 </div>
 <div class="carte">
 <div class="icone-carte"><img alt="" src="images/icons/users-round.svg"/></div>
 <h3 data-i18n="about_team_title">Teamwork</h3>
-<p data-i18n="about_team_desc">Open to collaboration, feedback and shared ideas.</p>
+<p data-i18n="about_team_desc">I enjoy exchanging ideas and learning from others.</p>
 </div>
 </div>
 </section>
@@ -115,10 +106,7 @@
 <div class="skills-intro">
 <h2 data-i18n="skills_label">SKILLS</h2>
 <h3 data-i18n="skills_title">My Skills</h3>
-<p data-i18n="skills_desc">
-                    Technologies and tools I use to build reliable,
-                    secure and maintainable backend applications.
-                </p>
+<p data-i18n="skills_desc">The tools and technologies I've used in my projects.</p>
 </div>
 <div class="skills-grille">
 <div class="skill-carte">
@@ -150,8 +138,8 @@
 <h4>Git</h4>
 </div>
 <div class="skill-carte">
-<img alt="GitHub" src="images/icons/github.svg"/>
-<h4>GitHub</h4>
+<img alt="JUnit" src="images/icons/junit.svg"/>
+<h4>JUnit</h4>
 </div>
 </div>
 </section>
@@ -159,10 +147,7 @@
 <div class="projects-intro">
 <p class="projects-label" data-i18n="projects_label">PROJECTS</p>
 <h2 data-i18n="projects_title">My Projects</h2>
-<p class="projects-description" data-i18n="projects_desc">
-                    Projects I have built to apply and strengthen my skills in
-                    Java, Spring Boot and web development.
-                </p>
+<p class="projects-description" data-i18n="projects_desc">A few projects I've worked on while learning Java, Spring Boot and React.</p>
 </div>
 <div class="projects-grid">
 <!-- Nutri-Track -->
@@ -172,10 +157,7 @@
 </div>
 <h3>Nutri-Track</h3>
 <span class="project-featured-label" data-i18n="project_featured">Main project</span>
-<p class="project-summary" data-i18n="project_nutri_summary">
-                        A nutrition-tracking REST API for managing meals,
-                        calculating calories and macronutrients, and setting daily goals.
-                    </p>
+<p class="project-summary" data-i18n="project_nutri_summary">A REST API to log meals, calculate calories and macros, and track daily nutrition goals.</p>
 <ul aria-label="Technologies" class="project-tags">
 <li>Java</li>
 <li>Spring Boot</li>
@@ -188,12 +170,7 @@
                         </a>
 <details class="project-more">
 <summary><span data-i18n="project_nutri_button">Details</span><span aria-hidden="true">→</span></summary>
-<p data-i18n="project_nutri_details">
-                                Backend project with food and meal CRUD,
-                                automatic daily nutritional calculations,
-                                goals, and unit tests.
-                                The React frontend is still in progress.
-                            </p>
+<p data-i18n="project_nutri_details">Food and meal management, daily totals, goals and JUnit tests. The React interface is still in progress.</p>
 </details>
 </div>
 </article>
@@ -203,10 +180,7 @@
 <img alt="" src="images/icons/project-tshirt.svg"/>
 </div>
 <h3>TshirtUp</h3>
-<p class="project-summary" data-i18n="project_tshirt_summary">
-                        A full-stack T-shirt store with a React frontend,
-                        Spring Boot backend, product catalogue and user accounts.
-                    </p>
+<p class="project-summary" data-i18n="project_tshirt_summary">A T-shirt shop built with React and Spring Boot, with a product catalogue and user accounts.</p>
 <ul aria-label="Technologies" class="project-tags">
 <li>React</li>
 <li>Spring Boot</li>
@@ -219,12 +193,7 @@
                         </a>
 <details class="project-more">
 <summary><span data-i18n="project_tshirt_button">Details</span><span aria-hidden="true">→</span></summary>
-<p data-i18n="project_tshirt_details">
-                                Includes product and category browsing,
-                                an administration interface for product CRUD,
-                                login and registration, and a shopping-cart page.
-                                A learning project still being improved.
-                            </p>
+<p data-i18n="project_tshirt_details">Product categories, an admin page to manage the catalogue, login and a shopping cart.</p>
 </details>
 </div>
 </article>
@@ -234,10 +203,7 @@
 <img alt="" src="images/icons/project-todo.svg"/>
 </div>
 <h3>To-Do List API</h3>
-<p class="project-summary" data-i18n="project_todo_summary">
-                        A REST API for creating and deleting tasks,
-                        tracking completion status and storing task data.
-                    </p>
+<p class="project-summary" data-i18n="project_todo_summary">A small REST API to add, complete and delete tasks, with data saved using JPA.</p>
 <ul aria-label="Technologies" class="project-tags">
 <li>Java</li>
 <li>Spring Boot</li>
@@ -250,11 +216,7 @@
                         </a>
 <details class="project-more">
 <summary><span data-i18n="project_todo_button">Details</span><span aria-hidden="true">→</span></summary>
-<p data-i18n="project_todo_details">
-                                Practice backend API with endpoints to create,
-                                list and delete tasks, toggle task completion,
-                                and persist data using Spring Data JPA.
-                            </p>
+<p data-i18n="project_todo_details">Create tasks, view the list, update their status or delete them. Spring Data JPA handles persistence.</p>
 </details>
 </div>
 </article>
@@ -264,10 +226,7 @@
 <img alt="" src="images/icons/project-payment.svg"/>
 </div>
 <h3>Payment Tracker</h3>
-<p class="project-summary" data-i18n="project_payment_summary">
-                        A Spring Boot API to manage payments, search transactions,
-                        and calculate totals, averages and other statistics.
-                    </p>
+<p class="project-summary" data-i18n="project_payment_summary">An API to record payments, filter transactions and view basic statistics.</p>
 <ul aria-label="Technologies" class="project-tags">
 <li>Java</li>
 <li>Spring Boot</li>
@@ -280,11 +239,7 @@
                         </a>
 <details class="project-more">
 <summary><span data-i18n="project_payment_button">Details</span><span aria-hidden="true">→</span></summary>
-<p data-i18n="project_payment_details">
-                                Payment CRUD, amount filters, search by title,
-                                validation, totals, averages, minimum and
-                                maximum amounts, backed by MySQL.
-                            </p>
+<p data-i18n="project_payment_details">Search payments by title, filter by amount and calculate totals, averages and minimum or maximum values.</p>
 </details>
 </div>
 </article>
@@ -294,9 +249,7 @@
 <div class="education-intro">
 <p class="education-label" data-i18n="education_label">EDUCATION</p>
 <h2 data-i18n="education_title">My Education</h2>
-<p class="education-description" data-i18n="education_desc">
-                    My academic background and training that shaped my path into software development.
-                </p>
+<p class="education-description" data-i18n="education_desc">My studies and the training that led me to software development.</p>
 </div>
 <div class="education-contenu">
 <!-- Formations -->
@@ -321,15 +274,6 @@
 <h3 data-i18n="education_technician">Programming Technician</h3>
 </div>
 </article>
-<article class="education-carte">
-<div class="education-icone">
-<img alt="" src="images/icons/education-construction.svg"/>
-</div>
-<div class="education-infos">
-<span class="education-date">2016</span>
-<h3 data-i18n="education_construction">Building Construction</h3>
-</div>
-</article>
 </div>
 <!-- Illustration -->
 <div class="education-illustration">
@@ -341,20 +285,14 @@
 <div class="contact-intro">
 <h2 data-i18n="contact_label">CONTACT</h2>
 <h3 data-i18n="contact_title">Get In Touch</h3>
-<p data-i18n="contact_intro">
-                    Interested in working together or have an opportunity in mind?
-                    Feel free to reach out. I'd be happy to connect!
-                </p>
+<p data-i18n="contact_intro">Have a question about my projects or a junior IT opportunity? Feel free to get in touch.</p>
 </div>
 <div class="contact-contenu">
 <!-- Présentation -->
 <div class="contact-presentation">
 <div class="contact-disponible"><span class="contact-point"></span><span data-i18n="contact_available">Open to Junior IT Opportunities</span></div>
 <h3 data-i18n="contact_work">Let's Work Together!</h3>
-<p data-i18n="contact_prof">
-                        I'm open to junior opportunities in Java backend development,
-                        software testing and application support.
-                    </p>
+<p data-i18n="contact_prof">I'm looking for my first IT role, especially in Java backend development, software testing or application support.</p>
 <a class="contact-bouton" href="mailto:usumovmagomedemi1@gmail.com"><span data-i18n="contact_send">Send Me an Email</span><span>↗</span></a>
 <p class="contact-ville" data-i18n="contact_city">Brussels, Belgium</p>
 </div>
@@ -403,7 +341,7 @@
 </section>
 </main>
 <footer class="site-footer">
-<p data-i18n="footer_text">© 2026 Magomed-Emi Usumov · Built with HTML &amp; CSS</p>
+<p data-i18n="footer_text">© 2026 Magomed-Emi Usumov · Built with HTML, CSS &amp; JavaScript</p>
 <div class="footer-links">
 <a data-i18n="footer_top" href="#home">Back to top ↑</a>
 <a href="https://github.com/Magomed-Emi" rel="noopener noreferrer" target="_blank">GitHub</a>
